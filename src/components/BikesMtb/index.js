@@ -1,6 +1,7 @@
 // ./client/src/components/BikesMtb/index.js
 import React, { useEffect, useContext } from 'react'
 import BikeMtbContext from './../../context/BikeMtb/BikeMtbContext'
+import { Link } from 'react-router-dom'
 
 
 export default function BikesMtb() {
@@ -33,7 +34,11 @@ export default function BikesMtb() {
                     bikesMtb.map((element) => {
                         return (
                             <li key={element._id}>
+
+                                <Link to={`/bikesmtb/${element._id}`}>
                                 <p>{element.marca}</p>
+                                </Link>
+                                
                                 <p>{element.precio}</p>
 
                             </li>

@@ -9,8 +9,11 @@ import Home from "./components/Home";
 import Layout from "./components/Layout";
 
 import BikesMtb from "./components/BikesMtb";
-import BikesRuta from "./components/BikesRuta";
+import SingleMtb from "./components/BikesMtb/Single";
 import BikeMtbState from "./context/BikeMtb/BikeMtbState";
+
+import BikesRuta from "./components/BikesRuta";
+import SingleRuta from "./components/BikesRuta/Single";
 import BikeRutaState from "./context/BikeRuta/BikeRutaState";
 //2. Función
 
@@ -21,17 +24,26 @@ const Router = () => {
         <BikeMtbState>
           <BrowserRouter>
             <Routes>
+
               <Route path="/" element={<Layout />}>
+                
                 {/* localhost:3000/  */}
                 <Route index element={<Home />} />
                 {/* localhost:3000/registro  */}
                 <Route path="registro" element={<Register />} />
                 {/* localhost:3000/iniciar-sesion  */}
                 <Route path="iniciar-sesion" element={<Login />} />
+
                 {/* localhost:3000/bikesmtb  */}
                 <Route path="bikesmtb" element={<BikesMtb />} />
+                {/* localhost:3000/bikesmtb/:id  */}
+                <Route path="bikesmtb/:id" element={<SingleMtb />} />
+
                 {/* localhost:3000/bikesruta  */}
                 <Route path="bikesruta" element={<BikesRuta />} />
+                {/* localhost:3000/bikesruta/:id  */}
+                <Route path="bikesruta/:id" element={<SingleRuta />} />
+
               </Route>
             </Routes>
           </BrowserRouter>

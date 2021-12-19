@@ -10,6 +10,21 @@ const BikeRutaState = (props) => {
     //1. Initial State (Estado Inicial)
     const initialState = {
         bikesRuta:[],
+        singleBikeRuta: {
+            _id:"",
+            marca: "",
+            modelo: "",
+            year: "",
+            talla: "",
+            rodada: "",
+            color: "",
+            tipofreno: "",
+            transmision: "",
+            material: "",
+            modalidad: "",
+            descripcion: "",
+            precio: ""
+        },
         hola: 'mundo'
     }
 
@@ -32,14 +47,28 @@ const BikeRutaState = (props) => {
         })
     }
 
+    const getBikeRuta = async (bikeRutaId) => {
+
+        const res = await axiosClient.get(`bikesruta/readone/${bikeRutaId}`)
+
+        const selectedBikeRuta = res.data.data
+
+        dispatch({
+            type: 'GET_BIKERUTA',
+            payload: selectedBikeRuta
+        })
+    }
+
 
     //4. Retorno
     return (
         <BikeRutaContext.Provider
         value={{
             bikesRuta: globalState.bikesRuta,
-            hola: globalState.hola,           
-            getBikesRuta
+            hola: globalState.hola,  
+            singleBikeRuta: globalState.singleBikeRuta,         
+            getBikesRuta,
+            getBikeRuta
         }}
         >
             {props.children}

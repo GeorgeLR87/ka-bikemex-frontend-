@@ -1,6 +1,7 @@
 // ./client/src/components/BikesRuta/index.js
 import React, { useEffect, useContext } from 'react'
 import BikeRutaContext from './../../context/BikeRuta/BikerutaContext'
+import { Link } from 'react-router-dom'
 
 export default function BikesRuta() {
     //Estado Global
@@ -31,7 +32,11 @@ export default function BikesRuta() {
                         bikesRuta.map((element) => {
                             return (
                                 <li key={element._id}>
+
+                                    <Link to={`/bikesruta/${element._id}`}>
                                     <p>{element.marca}</p>
+                                    </Link>
+                                    
                                     <p>{element.precio}</p>
                                 </li>
                             )

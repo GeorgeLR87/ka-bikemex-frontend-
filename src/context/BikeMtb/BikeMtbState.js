@@ -14,6 +14,21 @@ const BikeMtbState = (props) => {
     //1. Initial State (Estado Inicial)
     const initialState = {
         bikesMtb: [],
+        singleBikeMtb: {
+            _id:"",
+            marca: "",
+            modelo: "",
+            year: "",
+            talla: "",
+            rodada: "",
+            color: "",
+            rdelantero: "",
+            rtrasero: "",
+            material: "",
+            modalidad: "",
+            descripcion: "",
+            precio: ""
+        },
         hola: 'mundo'
 
     }
@@ -36,7 +51,18 @@ const BikeMtbState = (props) => {
             type: 'GET_BIKESMTB',
             payload: list
         })
+    }
 
+    const getBikeMtb = async (bikeMtbId) => {
+
+        const res = await axiosClient.get(`bikesmtb/readone/${bikeMtbId}`)
+
+        const selectedBikeMtb = res.data.data
+
+        dispatch({
+            type: 'GET_BIKEMTB',
+            payload: selectedBikeMtb
+        })
     }
 
     //4. Retorno
@@ -45,8 +71,10 @@ const BikeMtbState = (props) => {
         <BikeMtbContext.Provider
         value={{
             bikesMtb: globalState.bikesMtb,
-            hola: globalState.hola,            
-            getBikesMtb
+            hola: globalState.hola, 
+            singleBikeMtb: globalState.singleBikeMtb,           
+            getBikesMtb,
+            getBikeMtb
         
         }}
         >
