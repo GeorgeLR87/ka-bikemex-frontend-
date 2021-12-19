@@ -9,11 +9,15 @@ import Footer from "./Footer";
 export default function Layout() {
   return (
     <div>
-      <Header />
+      <div class="flex flex-col h-screen justify-between">
 
-        <Outlet />
+        <Header />
 
-      <Footer />
+         <Outlet />
+
+        <Footer />
+
+      </div>
     </div>
   );
 }
