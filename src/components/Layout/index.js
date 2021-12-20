@@ -10,13 +10,13 @@ export default function Layout() {
   return (
     <div>
       <div class="flex flex-col h-screen justify-between">
-
         <Header />
 
-         <Outlet />
+        <main class="mb-auto">
+          <Outlet />
+        </main>
 
         <Footer />
-
       </div>
     </div>
   );
