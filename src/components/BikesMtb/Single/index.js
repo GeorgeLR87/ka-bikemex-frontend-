@@ -1,5 +1,5 @@
 // ./client/src/components/BikesMtb/Single/index.js
-import React, { useContext } from "react"
+import React, { useEffect, useContext } from "react"
 import BikeMtbContext from "./../../../context/BikeMtb/BikeMtbContext"
 import { useParams } from "react-router-dom"
 
@@ -10,6 +10,10 @@ export default function Single() {
 
     const params = useParams()
     const id = params.id
+
+    useEffect(() => {
+        getBikeMtb(id)
+    }, [])
 
     return(
         <div>

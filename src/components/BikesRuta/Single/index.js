@@ -1,5 +1,5 @@
 // ./client/src/components/BikesRuta/Single/index.js
-import React, { useContext } from "react"
+import React, { useEffect, useContext } from "react"
 import BikeRutaContext from "./../../../context/BikeRuta/BikerutaContext"
 import { useParams } from "react-router-dom"
 
@@ -10,6 +10,10 @@ export default function Single() {
 
     const params = useParams()
     const id = params.id
+
+    useEffect(() => {
+        getBikeRuta(id)
+    }, [])
 
     return(
         <div>
