@@ -59,6 +59,13 @@ const BikeRutaState = (props) => {
         })
     }
 
+    const createBikeRuta = async (form) => {
+
+        const res = await axiosClient.post('/bikesruta/create', form)
+
+        console.log(res)
+    }
+
 
     //4. Retorno
     return (
@@ -68,7 +75,8 @@ const BikeRutaState = (props) => {
             hola: globalState.hola,  
             singleBikeRuta: globalState.singleBikeRuta,         
             getBikesRuta,
-            getBikeRuta
+            getBikeRuta,
+            createBikeRuta
         }}
         >
             {props.children}

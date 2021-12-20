@@ -7,9 +7,7 @@ export default function Create() {
   const ctx = useContext(BikeRutacontext)
   const {
     createBikeRuta
-  } = ctx
-
-  console.log(createBikeRuta)
+  } = ctx  
 
   //2. Estado Local
   const [newBikeRuta, setNewBikeRuta] = useState({
@@ -33,13 +31,20 @@ export default function Create() {
 
     setNewBikeRuta({
       ...newBikeRuta,
-      [e.target.marca]: e.target.value,
+      [e.target.name]: e.target.value,
     });
   };
 
+  const handleSubmit = (e) => {
+
+    e.preventDefault()
+
+    createBikeRuta(newBikeRuta)
+  }
+
   return (
     <>
-      <form action="#" method="POST">
+      <form onSubmit={ (event) => { handleSubmit(event)}}>
         <div class="shadow sm:rounded-md sm:overflow-hidden">
           <div class="bg-white py-6 px-4 space-y-6 sm:p-6">
             <div>

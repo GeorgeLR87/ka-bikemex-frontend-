@@ -65,6 +65,13 @@ const BikeMtbState = (props) => {
         })
     }
 
+    const createBikeMtb = async (form) => {
+
+        const res = await axiosClient.post('/bikesmtb/create', form)
+
+        console.log(res)
+    }
+
     //4. Retorno
     return (
 
@@ -74,7 +81,8 @@ const BikeMtbState = (props) => {
             hola: globalState.hola, 
             singleBikeMtb: globalState.singleBikeMtb,           
             getBikesMtb,
-            getBikeMtb
+            getBikeMtb,
+            createBikeMtb
         
         }}
         >

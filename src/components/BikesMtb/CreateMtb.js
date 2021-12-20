@@ -9,8 +9,6 @@ export default function Create() {
     createBikeMtb
   } = ctx
 
-  console.log(createBikeMtb)
-
   //2. Estado Local
   const [newBikeMtb, setNewBikeMtb] = useState({
     marca: "",
@@ -33,13 +31,20 @@ export default function Create() {
 
     setNewBikeMtb({
       ...newBikeMtb,
-      [e.target.marca]: e.target.value,
+      [e.target.name]: e.target.value,
     });
   };
 
+  const handleSubmit = (e) => {
+
+    e.preventDefault()
+
+    createBikeMtb(newBikeMtb)
+  }
+
   return (
     <>
-      <form action="#" method="POST">
+      <form onSubmit={ (event) => { handleSubmit(event)}}>
         <div class="shadow sm:rounded-md sm:overflow-hidden">
           <div class="bg-white py-6 px-4 space-y-6 sm:p-6">
             <div>
