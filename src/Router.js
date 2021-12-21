@@ -24,7 +24,7 @@ import UserState from "./context/User/UserState";
 import Profile from "./components/User/Profile";
 import Auth from "./routes/Auth"
 import Private from "./routes/Private"
-import AboutUs from "./components/User/AboutUs";
+import AboutUs from "./components/Layout/AboutUs";
 
 //import Public from "./routes/Public"
 
@@ -71,9 +71,11 @@ const Router = () => {
                 <Route path="bikesruta/edit/:id" element={<EditarRuta />} />
 
                 {/* localhost:3000/profile */}
+							 <Route path="aboutus" element={<AboutUs />} />
+
+                {/* localhost:3000/profile */}
 							 <Route path="profile" element={<Private component={Profile} />} />
-               {/* localhost:3000/profile */}
-							 <Route path="aboutus" element={<Private component={AboutUs} />} />
+               
 
               </Route>
             </Routes>

@@ -3,8 +3,16 @@ import React, { useEffect, useContext } from "react"
 import BikeMtbContext from "./../../../context/BikeMtb/BikeMtbContext"
 import { useParams } from "react-router-dom"
 import { Link } from "react-router-dom"
+import UserContext from "../../../context/User/UserContext";
+
 
 export default function Single() {
+
+	const ctxUser = useContext(UserContext)
+
+ const {   
+    authStatus
+  } = ctxUser 
 
     const ctx = useContext(BikeMtbContext)
     const { 
@@ -20,11 +28,12 @@ export default function Single() {
 
     return (
         <>
-		
-
 		<div>
 
-		<div class="mt-4 flex md:mt-0">
+			{
+				authStatus ?
+				<>
+				<div class="mt-4 flex md:mt-0">
 						<Link to={`/bikesmtb/edit/${id}`}>
 							<button 
                             type="button" 
@@ -42,8 +51,14 @@ export default function Single() {
 								Borrra Bikemtb
 							</button>
 						</Link>
+					</div>				
+				</>
+				:
+				<>
+				</>
+			}
 
-					</div>
+		
 
 					
 
