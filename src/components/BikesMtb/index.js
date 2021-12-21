@@ -55,7 +55,7 @@ export default function BikesMtb() {
                                                     <div class="mt-3 flex flex-col items-center">
                                                         <p class="mt-1 text-sm text-gray-500"><h1>Descripcion</h1><br></br>{element.descripcion}</p>
                                                     </div>
-                                                    <p class="mt-4 text-base font-medium text-gray-900"><h1>Precio $</h1><br></br> {element.precio}</p>
+                                                    <p class="mt-4 text-base font-medium text-gray-900"><h1>Precio $</h1><br></br> {element.precio}.00 MXN</p>
                                                 </div>
                                             </div>
                                         </>

@@ -56,11 +56,7 @@ export default function Single() {
 				:
 				<>
 				</>
-			}
-
-		
-
-					
+			}					
 
 			<div className="bg-white">
 				<div className="max-w-2xl mx-auto py-16 px-4 sm:py-24 sm:px-6 lg:max-w-7xl lg:px-8 lg:grid lg:grid-cols-2 lg:gap-x-8">
@@ -89,6 +85,48 @@ export default function Single() {
 						<div className="mt-4">
 							<h1 className="text-3xl font-extrabold tracking-tight text-gray-900 sm:text-4xl">{singleBikeMtb.marca}</h1>
 						</div>
+
+							<br></br>
+						<nav aria-label="Breadcrumb">
+							<ol role="list" className="flex-col ">					
+								<li>
+									<div className="flex items-center text-sm font-medium text-gray-500 hover:text-gray-900">Año: {singleBikeMtb.year}</div>
+								</li>
+								<br></br>
+								<li>
+									<div className="flex items-center text-sm font-medium text-gray-500 hover:text-gray-900">Talla: {singleBikeMtb.talla}</div>
+								</li>
+								<br></br>
+								<li>
+									<div className="flex items-center text-sm font-medium text-gray-500 hover:text-gray-900">Rodada: {singleBikeMtb.rodada}</div>
+								</li>
+								<br></br>
+								<li>
+									<div className="flex items-center text-sm font-medium text-gray-500 hover:text-gray-900">Color: {singleBikeMtb.color}</div>
+								</li>
+								<br></br>
+								<li>
+									<div className="flex items-center text-sm font-medium text-gray-500 hover:text-gray-900">Recorrido Delantero: {singleBikeMtb.rdelantero}</div>
+								</li>
+								<br></br>
+								<li>
+									<div className="flex items-center text-sm font-medium text-gray-500 hover:text-gray-900">Recorrido Trasero: {singleBikeMtb.rtrasero}</div>
+								</li>
+								<br></br>
+								<li>
+									<div className="flex items-center text-sm font-medium text-gray-500 hover:text-gray-900">Material: {singleBikeMtb.material}</div>
+								</li>
+								<br></br>
+								<li>
+									<div className="flex items-center text-sm font-medium text-gray-500 hover:text-gray-900">Modalidad: {singleBikeMtb.modalidad}</div>
+								</li>
+								<br></br>
+								<li>
+									<div className="flex items-center text-sm font-medium text-gray-500 hover:text-gray-900">Descripcion: {singleBikeMtb.descripcion}</div>
+								</li>
+							</ol>
+						</nav>
+
 						<section aria-labelledby="information-heading" className="mt-4">
 							<h2 id="information-heading" className="sr-only">Product information</h2>
 							<div className="flex items-center">
@@ -115,18 +153,12 @@ export default function Single() {
 												</svg>
 											</div>
 											<p className="sr-only">4 out of 5 stars</p>
-										</div>
-										<p className="ml-2 text-sm text-gray-500">1624 reviews</p>
+										</div>										
 									</div>
 								</div>
 							</div>
-							<div className="mt-4 space-y-6">
-								<p className="text-base text-gray-500">{singleBikeMtb.description}</p>
-							</div>
-							<div className="mt-6 flex items-center">
-								<svg className="flex-shrink-0 w-5 h-5 text-green-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-									<path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-								</svg>
+							
+							<div className="mt-6 flex items-center">				
 								<p className="ml-2 text-sm text-gray-500">In stock and ready to ship</p>
 							</div>
 						</section>

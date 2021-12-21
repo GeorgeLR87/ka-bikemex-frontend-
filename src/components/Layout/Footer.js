@@ -34,7 +34,7 @@ export default function Footer() {
             &copy; 2021. Todos los derechos reservados.
           </p>
           <p className="text-center text-base text-gray-400">
-            Esta es una tienda electrónica ficticia con objetivos académicos y de aprendizaje.
+            Tienda electrónica de bicicletas usadas.
           </p>
         </div>
       </footer>
