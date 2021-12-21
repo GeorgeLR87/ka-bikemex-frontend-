@@ -23,6 +23,7 @@ export default function Create() {
     modalidad: "",
     descripcion: "",
     precio: "",
+    imagen: ""
   });
 
   //3. Funciones
@@ -209,6 +210,19 @@ export default function Create() {
                 onChange={ (event) => { handleChange(event) } }
                   type="text"
                   name="descripcion"                  
+                  class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"/>
+              </div>
+
+              <div class="col-span-6">
+                <label
+                  for="street-address"
+                  class="block text-sm font-medium text-gray-700">
+                  Imagen
+                </label>
+                <input
+                onChange={ (event) => { handleChange(event) } }
+                  type="text"
+                  name="imagen"                  
                   class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"/>
               </div>
 

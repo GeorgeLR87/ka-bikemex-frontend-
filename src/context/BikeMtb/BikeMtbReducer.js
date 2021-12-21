@@ -5,6 +5,7 @@ const reducer = (globalState, action) => {
     switch (action.type) {
 
         case 'GET_BIKEMTB':
+        case 'UPDATE_BIKEMTB':
             return {
                 ...globalState,
                 singleBikeMtb: action.payload

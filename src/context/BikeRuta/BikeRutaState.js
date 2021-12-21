@@ -1,7 +1,7 @@
 // ./client/src/BikeMtb/bikeMtbState.js
 
 import { useReducer } from "react"
-import BikeRutaContext from './BikerutaContext'
+import BikeRutaContext from './BikeRutaContext'
 import BikeRutaReducer from './BikeRutaReducer'
 import axiosClient from './../../config/axios'
 
@@ -23,7 +23,8 @@ const BikeRutaState = (props) => {
             material: "",
             modalidad: "",
             descripcion: "",
-            precio: ""
+            precio: "",
+            imagen:""
         },
         hola: 'mundo'
     }
@@ -66,6 +67,32 @@ const BikeRutaState = (props) => {
         console.log(res)
     }
 
+    const updateBikeRuta  = async (form, idBikeRuta) => {
+
+		const res = await axiosClient.put(`bikesruta/edit/${idBikeRuta}`, form)
+
+		const updatedRutaMtb = res.data.data        
+
+		dispatch({
+			type: "UPDATE_BIKERUTA",
+			payload: updatedRutaMtb
+		})
+
+	}
+
+    const deleteBikeRuta = async (idBikeRuta) => {
+        const res = await axiosClient.delete(`bikesruta/delete/${idBikeRuta}`);
+
+        const deletedBikeRuta = res.data.data;
+
+        dispatch({
+            type: 'DELETE_BIKERUTA',
+            payload: deletedBikeRuta,
+        });
+    };
+
+
+
 
     //4. Retorno
     return (
@@ -76,7 +103,9 @@ const BikeRutaState = (props) => {
             singleBikeRuta: globalState.singleBikeRuta,         
             getBikesRuta,
             getBikeRuta,
-            createBikeRuta
+            createBikeRuta,
+            updateBikeRuta,
+            deleteBikeRuta
         }}
         >
             {props.children}

@@ -1,56 +1,115 @@
-// ./client/src/components/BikesMtb/CreateMtb.js
-import React, { useState, useContext } from "react";
-import BikeRutacontext from "./../../context/BikeRuta/BikeRutaContext"
+//./src/components/Guitars/Single/Edit.js
 
-export default function Create() {
-  //1. Estado Global
-  const ctx = useContext(BikeRutacontext)
-  const {
-    createBikeRuta
-  } = ctx  
+import React, { useState, useContext, useEffect } from 'react'
+import { useParams } from 'react-router-dom'
+import BikeRutaContext from '../../../context/BikeRuta/BikeRutaContext'
 
-  //2. Estado Local
-  const [newBikeRuta, setNewBikeRuta] = useState({
-    marca: "",
-    modelo: "",
-    year: "",
-    talla: "",
-    rodada: "",
-    color: "",
-    tipofreno: "",
-    transmision: "",
-    material: "",
-    modalidad: "",
-    descripcion: "",
-    precio: "",
-    imagen: "",
-  });
 
-  //3. Funciones
-  const handleChange = (e) => {
-    e.preventDefault();
 
-    setNewBikeRuta({
-      ...newBikeRuta,
-      [e.target.name]: e.target.value,
-    });
-  };
+export default function Edit() {
 
-  const handleSubmit = (e) => {
+	// 1. ESTADO GLOBAL
+	const params = useParams()
+	const idBikeRuta = params.id
 
-    e.preventDefault()
+	const ctx = useContext(BikeRutaContext)
 
-    createBikeRuta(newBikeRuta)
-  }
+	const {
+		singleBikeRuta,
+		getBikeRuta,
+		updateBikeRuta
+	} = ctx
 
-  return (
-    <>
-      <form onSubmit={ (event) => { handleSubmit(event)}}>
+	
+
+	// 2. ESTADO LOCAL
+	const [bikeRutaData, setBikeRutaData] = useState({
+			      marca: "",
+            modelo: "",
+            year: "",
+            talla: "",
+            rodada: "",
+            color: "",
+            tipofreno: "",
+            transmision: "",
+            material: "",
+            modalidad: "",
+            descripcion: "",
+            precio: "",
+            imagen: ""
+	})
+
+	// 3. FUNCIONES
+
+	// USEEFFECT PARA ACTUALIZAR DATOS EN EL ESTADO GLOBAL
+	useEffect(() => {
+
+		getBikeRuta(idBikeRuta)
+
+	}, [])
+
+	// USEEFFECT PARA ACTUALIZAR LOS DATOS DEL ESTADO GLOBAL AL ESTADO LOCAL
+	useEffect(() => {
+
+		const {
+			marca,
+            modelo,
+            year,
+            talla,
+            rodada,
+            color,
+            tipofreno,
+            transmision,
+            material,
+            modalidad,
+            descripcion,
+            precio,
+            imagen
+		} = ctx.singleBikeRuta
+
+		setBikeRutaData({
+			marca: marca,
+            modelo: modelo,
+            year: year,
+            talla: talla,
+            rodada: rodada,
+            color: color,
+            tipofreno: tipofreno,
+            transmision: transmision,
+            material: material,
+            modalidad: modalidad,
+            descripcion: descripcion,
+            precio: precio,
+            imagen: imagen
+		})
+	}, [singleBikeRuta])
+
+	const handleChange = (e) => {
+		e.preventDefault()
+
+		setBikeRutaData({
+			...bikeRutaData,
+			[e.target.name]: e.target.value
+		})
+
+	}
+
+	const handleSubmit = (e) => {
+		
+		e.preventDefault()
+
+		updateBikeRuta( bikeRutaData, idBikeRuta)
+
+	}
+
+	return (
+		<>
+		<form onSubmit={ (event) => { handleSubmit(event)}}>
         <div class="shadow sm:rounded-md sm:overflow-hidden">
           <div class="bg-white py-6 px-4 space-y-6 sm:p-6">
             <div>
               <h3 class="text-lg leading-6 font-medium text-gray-900">
-                BikeRuta Informacion
+                BikeMtb Informacion
               </h3>
               
             </div>
@@ -64,6 +123,7 @@ export default function Create() {
                   Marca
                 </label>
                 <input
+				value={bikeRutaData.marca}
                 onChange={ (event) => { handleChange(event) } }
                   type="text"
                   name="marca"                  
@@ -77,6 +137,7 @@ export default function Create() {
                   Modelo
                 </label>
                 <input
+				value={bikeRutaData.modelo}
                 onChange={ (event) => { handleChange(event) } }
                   type="text"
                   name="modelo"                  
@@ -90,6 +151,7 @@ export default function Create() {
                   Año
                 </label>
                 <input
+				value={bikeRutaData.year}
                 onChange={ (event) => { handleChange(event) } }
                   type="number"
                   name="year"                  
@@ -121,6 +183,7 @@ export default function Create() {
                   Rodada
                 </label>
                 <input
+				value={bikeRutaData.rodada}
                 onChange={ (event) => { handleChange(event) } }
                   type="text"
                   name="rodada"                  
@@ -134,6 +197,7 @@ export default function Create() {
                   Color
                 </label>
                 <input
+				value={bikeRutaData.color}
                 onChange={ (event) => { handleChange(event) } }
                   type="text"
                   name="color"                  
@@ -144,9 +208,10 @@ export default function Create() {
                 <label
                   for="region"
                   class="block text-sm font-medium text-gray-700">
-                  Tipo Freno
+                  Recorrido Delantero
                 </label>
                 <input
+				value={bikeRutaData.tipofreno}
                 onChange={ (event) => { handleChange(event) } }
                   type="text"
                   name="tipofreno"                  
@@ -157,9 +222,10 @@ export default function Create() {
                 <label
                   for="postal-code"
                   class="block text-sm font-medium text-gray-700">
-                  Transmision
+                  Tipo de Freno
                 </label>
                 <input
+				value={bikeRutaData.transmision}
                 onChange={ (event) => { handleChange(event) } }
                   type="text"
                   name="transmision"                  
@@ -195,7 +261,7 @@ export default function Create() {
                   <option value={''}>---</option>
                   <option value={'Desempeno'}>Desempeño</option>
                   <option value={'Gravel'}>Gravel</option>                                   
-                  <option value={'Ciclocross'}>Ciclocross</option>                                   
+                  <option value={'Ciclocross'}>ciclocross</option>                                   
                   <option value={'Triatlon'}>Triatlon</option>                                   
                 </select>
               </div>
@@ -207,6 +273,7 @@ export default function Create() {
                   Descripcion
                 </label>
                 <input
+				value={bikeRutaData.descripcion}
                 onChange={ (event) => { handleChange(event) } }
                   type="text"
                   name="descripcion"                  
@@ -220,13 +287,12 @@ export default function Create() {
                   Imagen
                 </label>
                 <input
+				value={bikeRutaData.imagen}
                 onChange={ (event) => { handleChange(event) } }
                   type="text"
                   name="imagen"                  
                   class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"/>
               </div>
-
-
 
               <div class="col-span-6 sm:col-span-3 lg:col-span-2">
                 <label
@@ -235,27 +301,26 @@ export default function Create() {
                   Precio
                 </label>
                 <input
+				value={bikeRutaData.precio}
                 onChange={ (event) => { handleChange(event) } }
                   type="number"
                   name="precio"                  
                   class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"/>
               </div>
 
-
-
-
             </div>
           </div>
           <div class="px-4 py-3 bg-gray-50 text-right sm:px-6">
+			  
             <button
               type="submit"
-              class="bg-indigo-600 border border-transparent rounded-md shadow-sm py-2 px-4 inline-flex justify-center text-sm font-medium text-white hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+              class="ml-8 whitespace-nowrap inline-flex items-center justify-center bg-gradient-to-r from-indigo-800 to-lime-500 bg-origin-border px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-black hover:from-lime-700 hover:to-indigo-700"
             >
               Guardar BikeRuta
             </button>
           </div>
         </div>
-      </form>
-    </>
-  );
+      </form>	
+		</>
+	)
 }

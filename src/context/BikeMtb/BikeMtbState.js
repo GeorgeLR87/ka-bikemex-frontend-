@@ -27,7 +27,8 @@ const BikeMtbState = (props) => {
             material: "",
             modalidad: "",
             descripcion: "",
-            precio: ""
+            precio: "",
+            imagen: ""
         },
         hola: 'mundo'
 
@@ -72,6 +73,32 @@ const BikeMtbState = (props) => {
         console.log(res)
     }
 
+    const updateBikeMtb  = async (form, idBikeMtb) => {
+
+		const res = await axiosClient.put(`bikesmtb/edit/${idBikeMtb}`, form)
+
+		const updatedBikeMtb = res.data.data
+
+        
+
+		dispatch({
+			type: "UPDATE_BIKEMTB",
+			payload: updatedBikeMtb
+		})
+
+	}
+
+    const deleteBikeMtb = async (idBikeMtb) => {
+        const res = await axiosClient.delete(`bikesmtb/delete/${idBikeMtb}`);
+
+        const deletedBikeMtb = res.data.data;
+
+        dispatch({
+            type: 'DELETE_BIKEMTB',
+            payload: deletedBikeMtb,
+        });
+    };
+
     //4. Retorno
     return (
 
@@ -82,7 +109,9 @@ const BikeMtbState = (props) => {
             singleBikeMtb: globalState.singleBikeMtb,           
             getBikesMtb,
             getBikeMtb,
-            createBikeMtb
+            createBikeMtb,
+            updateBikeMtb,
+            deleteBikeMtb
         
         }}
         >
