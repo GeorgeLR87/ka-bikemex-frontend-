@@ -58,10 +58,10 @@ export default function Single() {
                   <li>
                     <div className="flex items-center text-sm">
                       <Link
-                        to="/bikesmtb"
+                        to="/bikesruta"
                         className="font-medium text-gray-500 hover:text-gray-900"
                       >
-                        BikesMtb
+                        BikesRuta
                       </Link>
                       <svg
                         viewBox="0 0 20 20"
@@ -77,7 +77,7 @@ export default function Single() {
                   <li>
                     <div className="flex items-center text-sm">
                       <Link
-                        to="/bikesmtb"
+                        to="/bikesruta"
                         className="font-medium text-gray-500 hover:text-gray-900"
                       >
                         {singleBikeRuta.modelo}
