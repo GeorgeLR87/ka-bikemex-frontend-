@@ -44,7 +44,7 @@ export default function Register() {
         </h2>
         <p className="mt-2 text-center text-sm text-gray-600">
           ¿Ya tienes cuenta? &nbsp;
-          <Link to="/iniciar-sesion">
+          <Link to="/users/login">
             <a className="font-medium text-lime-500 hover:text-indigo-800">
               Inicia sesión.
             </a>

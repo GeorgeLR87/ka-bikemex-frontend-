@@ -31,7 +31,7 @@ export default function Home() {
                             </h1>
                             <br></br>
                             <p class="mt-6 max-w-lg mx-auto text-center text-xl text-indigo-200 sm:max-w-3xl">
-                                Empresa enfocada a la venta de bicibletas de Ruta y Montaña de Gamas altas. Vendemos todas las marcas de bicicletas usadas.
+                                Empresa enfocada a la venta de bicibletas de Ruta y Montaña de Gama Alta. Vendemos todas las marcas de bicicletas usadas.
                             </p>
                             
                         </div>
