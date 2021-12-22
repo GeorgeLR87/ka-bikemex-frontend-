@@ -27,7 +27,7 @@ export default function Home() {
                             <h1 class="text-center text-4xl font-extrabold tracking-tight sm:text-5xl lg:text-6xl">
                                 <span class="block text-white">Vendemos tu Bicicleta</span>
                                 <br></br>
-                                <span class="block text-indigo-100">Tienda de Bicibletas usadas Gamas Altas</span>
+                                <span class="block text-indigo-100">Tienda de Bicibletas usadas Gama Alta</span>
                             </h1>
                             <br></br>
                             <p class="mt-6 max-w-lg mx-auto text-center text-xl text-indigo-200 sm:max-w-3xl">

@@ -48,7 +48,7 @@ export default function Single() {
 							onClick={() => deleteBikeMtb(id)}
                             type="button" 
                             class="ml-8 whitespace-nowrap inline-flex items-center justify-center bg-gradient-to-r from-indigo-800 to-lime-500 bg-origin-border px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-black hover:from-lime-700 hover:to-indigo-700">
-								Borrra Bikemtb
+								Borra Bikemtb
 							</button>
 						</Link>
 					</div>				
