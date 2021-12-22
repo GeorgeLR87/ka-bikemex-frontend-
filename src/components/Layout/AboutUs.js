@@ -11,7 +11,7 @@ export default function AboutUs() {
 						<div className="space-y-12 lg:grid lg:grid-cols-3 lg:gap-8 lg:space-y-0">
 							<div className="space-y-5 sm:space-y-4">
 								<h2 className="text-3xl font-extrabold tracking-tight sm:text-4xl">Sobre Nosotros</h2>
-								<p className="text-xl text-gray-500">Empresa dedicada a la venta en linea de bicicletas usadas de alta Gama en sus distintas disciplinas Enduro, Crosscrountry, DownHill, Ruta, Triatlon y gravel</p>
+								<p className="text-xl text-gray-500">Empresa dedicada a la venta en línea de bicicletas usadas de alta Gama en sus distintas disciplinas Enduro, Crosscrountry, DownHill, Ruta, Triatlón y Gravel.</p>
 							</div>
 							
 						</div>

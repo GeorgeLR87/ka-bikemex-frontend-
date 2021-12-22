@@ -34,19 +34,19 @@ export default function Header() {
             <div className="ml-10 space-x-8 lg:block">
               <Link
                 to="/bikesmtb"
-                className="text-base font-medium text-black hover:text-indigo-50"
+                className="text-base font-medium text-indigo-50 hover:text-black"
               >
                 Bikes MTB
               </Link>
               <Link
                 to="/bikesruta"
-                className="text-base font-medium text-black hover:text-indigo-50"
+                className="text-base font-medium text-indigo-50 hover:text-black"
               >
                 Bikes Ruta
               </Link>
               <Link
                 to="/aboutus"
-                className="text-base font-medium text-black hover:text-indigo-50"
+                className="text-base font-medium text-indigo-50 hover:text-black"
               >
                 Sobre nosotros
               </Link>
@@ -60,29 +60,29 @@ export default function Header() {
               <>
                 <Link
                   to="bikesruta/crear"
-                  className="ml-8 whitespace-nowrap inline-flex items-center justify-center bg-gradient-to-r from-indigo-800 to-lime-500 bg-origin-border px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-black hover:from-lime-700 hover:to-indigo-700"
+                  className="ml-8 whitespace-nowrap inline-flex items-center justify-center bg-gradient-to-r from-indigo-800 to-lime-600 bg-origin-border px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-indigo-50 hover:text-black hover:from-lime-700 hover:to-indigo-700"
                 >
                   Crear BikeRuta
                 </Link>
 
                 <Link
                   to="bikesmtb/crear"
-                  className="ml-8 whitespace-nowrap inline-flex items-center justify-center bg-gradient-to-r from-indigo-800 to-lime-500 bg-origin-border px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-black hover:from-lime-700 hover:to-indigo-700"
+                  className="ml-8 whitespace-nowrap inline-flex items-center justify-center bg-gradient-to-r from-indigo-800 to-lime-600 bg-origin-border px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-indigo-50 hover:text-black hover:from-lime-700 hover:to-indigo-700"
                 >
                   Crear BikeMtb
                 </Link>
 
-                <Link
+               {/*  <Link
                   to="/profile"
                   className="ml-8 whitespace-nowrap inline-flex items-center justify-center bg-gradient-to-r from-indigo-800 to-lime-500 bg-origin-border px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-black hover:from-lime-700 hover:to-indigo-700"
                 >
                   Tu perfil
-                </Link>
+                </Link> */}
 
                 <a
                   onClick={() => logoutUser()}
                   href="/"
-                  className="ml-8 whitespace-nowrap inline-flex items-center justify-center bg-gradient-to-r from-indigo-800 to-lime-500 bg-origin-border px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-black hover:from-lime-700 hover:to-indigo-700"
+                  className="ml-8 whitespace-nowrap inline-flex items-center justify-center bg-gradient-to-r from-indigo-800 to-lime-600 bg-origin-border px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-black hover:text-indigo-50 hover:from-lime-700 hover:to-indigo-700"
                 >
                   Cerrar sesión
                 </a>
@@ -91,13 +91,14 @@ export default function Header() {
               <>
                 <Link
                   to="/users/create"
-                  className="ml-8 whitespace-nowrap inline-flex items-center justify-center bg-gradient-to-r from-indigo-800 to-lime-500 bg-origin-border px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-black hover:from-lime-700 hover:to-indigo-700"
+                  className="ml-8 whitespace-nowrap inline-flex items-center justify-center bg-gradient-to-r from-indigo-800 to-lime-600 bg-origin-border px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-indigo-50 hover:text-black hover:from-lime-700 hover:to-indigo-700"
+                  
                 >
                   Crear cuenta
                 </Link>
                 <Link
                   to="/users/login"
-                  className="ml-8 whitespace-nowrap inline-flex items-center justify-center bg-gradient-to-r from-indigo-800 to-lime-500 bg-origin-border px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-black hover:from-lime-700 hover:to-indigo-700"
+                  className="ml-8 whitespace-nowrap inline-flex items-center justify-center bg-gradient-to-r from-indigo-800 to-lime-600 bg-origin-border px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-indigo-50 hover:text-black hover:from-lime-700 hover:to-indigo-700"
                 >
                   Iniciar sesión
                 </Link>

@@ -27,11 +27,11 @@ export default function Home() {
                             <h1 className="text-center text-4xl font-extrabold tracking-tight sm:text-5xl lg:text-6xl">
                                 <span className="block text-white">Vendemos tu Bicicleta</span>
                                 <br></br>
-                                <span className="block text-indigo-100">Tienda de Bicibletas usadas Gama Alta</span>
+                                <span className="block text-indigo-100">Tienda de Bicicletas usadas Gama Alta</span>
                             </h1>
                             <br></br>
                             <p className="mt-6 max-w-lg mx-auto text-center text-xl text-indigo-200 sm:max-w-3xl">
-                                Empresa enfocada a la venta de bicibletas de Ruta y Montaña de Gama Alta. Vendemos todas las marcas de bicicletas usadas.
+                                Empresa enfocada a la venta de bicicletas de Ruta y Montaña de Gama Alta. Vendemos todas las marcas.
                             </p>
                             
                         </div>

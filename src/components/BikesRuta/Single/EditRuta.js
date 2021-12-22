@@ -113,7 +113,7 @@ export default function Edit() {
           <div className="bg-white py-6 px-4 space-y-6 sm:p-6">
             <div>
               <h3 className="text-lg leading-6 font-medium text-gray-900">
-                BikeMtb Informacion
+                BikeRuta Informacion
               </h3>
               
             </div>
@@ -212,7 +212,7 @@ export default function Edit() {
                 <label
                   htmlFor="region"
                   className="block text-sm font-medium text-gray-700">
-                  Recorrido Delantero
+                  Tipo de Freno
                 </label>
                 <input
 				value={bikeRutaData.tipofreno}
@@ -226,7 +226,7 @@ export default function Edit() {
                 <label
                   htmlFor="postal-code"
                   className="block text-sm font-medium text-gray-700">
-                  Tipo de Freno
+                  Transmisión
                 </label>
                 <input
 				value={bikeRutaData.transmision}
@@ -318,7 +318,7 @@ export default function Edit() {
 			  
             <button
               type="submit"
-              className="ml-8 whitespace-nowrap inline-flex items-center justify-center bg-gradient-to-r from-indigo-800 to-lime-500 bg-origin-border px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-black hover:from-lime-700 hover:to-indigo-700"
+              className="ml-8 whitespace-nowrap inline-flex items-center justify-center bg-gradient-to-r from-indigo-800 to-lime-600 bg-origin-border px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-indigo-50 hover:text-black hover:from-lime-700 hover:to-indigo-700"
             >
               Guardar BikeRuta
             </button>
