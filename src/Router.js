@@ -62,13 +62,13 @@ const Router = () => {
                 <Route path="bikesmtb/edit/:id" element={<EditarMtb />} />
 
                 {/* localhost:3000/bikesruta  */}
-                {/* <Route path="bikesruta" element={<BikesRuta />} /> */}
+                <Route path="bikesruta" element={<BikesRuta />} />
                 {/* localhost:3000/bikeruta/crear */}
-							  {/* <Route path="bikesruta/crear" element={<Createruta />} />  */}               
+							  <Route path="bikesruta/crear" element={<Createruta />} />                
                 {/* localhost:3000/bikesruta/:id  */}
-                {/* <Route path="bikesruta/:id" element={<SingleRuta />} /> */}
+                <Route path="bikesruta/:id" element={<SingleRuta />} />
                 {/* localhost:3000/bikesruta/:id/editar  */}
-                {/* <Route path="bikesruta/edit/:id" element={<EditarRuta />} /> */}
+                <Route path="bikesruta/edit/:id" element={<EditarRuta />} />
 
                 {/* localhost:3000/profile */}
 							 <Route path="aboutus" element={<AboutUs />} />
