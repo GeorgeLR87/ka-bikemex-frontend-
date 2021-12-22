@@ -1,11 +1,13 @@
 //./src/components/Guitars/Single/Edit.js
 
 import React, { useState, useContext, useEffect } from 'react'
-import { useParams } from 'react-router-dom'
+import { useParams, useNavigate } from 'react-router-dom'
 import BikeMtbContext from '../../../context/BikeMtb/BikeMtbContext'
 
 
 export default function Edit() {
+ 
+  const navigate = useNavigate()
 
 	// 1. ESTADO GLOBAL
 	const params = useParams()
@@ -98,6 +100,8 @@ export default function Edit() {
 		e.preventDefault()
 
 		updateBikeMtb( bikeMtbData, idBikeMtb)
+
+    navigate(`/bikesmtb/${idBikeMtb}`)
 
 	}
 
@@ -313,8 +317,7 @@ export default function Edit() {
 			  
             <button
               type="submit"
-              className="ml-8 whitespace-nowrap inline-flex items-center justify-center bg-gradient-to-r from-indigo-800 to-lime-500 bg-origin-border px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-black hover:from-lime-700 hover:to-indigo-700"
-            >
+              className="ml-8 whitespace-nowrap inline-flex items-center justify-center bg-gradient-to-r from-indigo-800 to-lime-500 bg-origin-border px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-black hover:from-lime-700 hover:to-indigo-700">
               Guardar BikeMtb
             </button>
           </div>

@@ -1,12 +1,14 @@
 //./src/components/Guitars/Single/Edit.js
 
 import React, { useState, useContext, useEffect } from 'react'
-import { useParams } from 'react-router-dom'
+import { useParams, useNavigate } from 'react-router-dom'
 import BikeRutaContext from './../../../context/BikeRuta/BikeRutaContext'
 
 
 
 export default function Edit() {
+
+  const navigate = useNavigate()
 
 	// 1. ESTADO GLOBAL
 	const params = useParams()
@@ -99,6 +101,8 @@ export default function Edit() {
 		e.preventDefault()
 
 		updateBikeRuta( bikeRutaData, idBikeRuta)
+
+    navigate(`/bikesruta/${idBikeRuta}`)
 
 	}
 
