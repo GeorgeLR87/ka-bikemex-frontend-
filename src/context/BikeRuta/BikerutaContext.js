@@ -1,6 +1,7 @@
 // ./client/src/BikeMtb/BikeRutaContext.js
+
 import { createContext } from "react"
 
-const BikeMtbContext = createContext(null)
+const BikeRutaContext = createContext(null)
 
-export default BikeMtbContext
+export default BikeRutaContext

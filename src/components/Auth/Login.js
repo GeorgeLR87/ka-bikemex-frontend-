@@ -59,7 +59,7 @@ export default function Login() {
             onSubmit={ (e) => { handleSubmit(e) }}
           >
             <div>
-              <label for="email" className="block text-sm font-medium text-gray-700">
+              <label htmlFor="email" className="block text-sm font-medium text-gray-700">
                 Tu correo electrónico
               </label>
               <div className="mt-1">
@@ -72,7 +72,7 @@ export default function Login() {
             </div>
 
             <div>
-              <label for="password" className="block text-sm font-medium text-gray-700">
+              <label htmlFor ="password" className="block text-sm font-medium text-gray-700">
                 Tu contraseña
               </label>
               <div className="mt-1">

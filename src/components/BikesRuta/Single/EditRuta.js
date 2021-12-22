@@ -105,21 +105,21 @@ export default function Edit() {
 	return (
 		<>
 		<form onSubmit={ (event) => { handleSubmit(event)}}>
-        <div class="shadow sm:rounded-md sm:overflow-hidden">
-          <div class="bg-white py-6 px-4 space-y-6 sm:p-6">
+        <div className="shadow sm:rounded-md sm:overflow-hidden">
+          <div className="bg-white py-6 px-4 space-y-6 sm:p-6">
             <div>
-              <h3 class="text-lg leading-6 font-medium text-gray-900">
+              <h3 className="text-lg leading-6 font-medium text-gray-900">
                 BikeMtb Informacion
               </h3>
               
             </div>
 
-            <div class="grid grid-cols-6 gap-6">
+            <div className="grid grid-cols-6 gap-6">
 
-            <div class="col-span-6 sm:col-span-3 lg:col-span-2">
+            <div className="col-span-6 sm:col-span-3 lg:col-span-2">
                 <label
-                  for="postal-code"
-                  class="block text-sm font-medium text-gray-700">
+                  htmlFor="postal-code"
+                  className="block text-sm font-medium text-gray-700">
                   Marca
                 </label>
                 <input
@@ -127,13 +127,13 @@ export default function Edit() {
                 onChange={ (event) => { handleChange(event) } }
                   type="text"
                   name="marca"                  
-                  class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"/>
+                  className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"/>
               </div>
 
-              <div class="col-span-6 sm:col-span-3 lg:col-span-2">
+              <div className="col-span-6 sm:col-span-3 lg:col-span-2">
                 <label
-                  for="postal-code"
-                  class="block text-sm font-medium text-gray-700">
+                  htmlFor="postal-code"
+                  className="block text-sm font-medium text-gray-700">
                   Modelo
                 </label>
                 <input
@@ -141,13 +141,13 @@ export default function Edit() {
                 onChange={ (event) => { handleChange(event) } }
                   type="text"
                   name="modelo"                  
-                  class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"/>
+                  className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"/>
               </div>
 
-              <div class="col-span-6 sm:col-span-3 lg:col-span-2">
+              <div className="col-span-6 sm:col-span-3 lg:col-span-2">
                 <label
-                  for="postal-code"
-                  class="block text-sm font-medium text-gray-700">
+                  htmlFor="postal-code"
+                  className="block text-sm font-medium text-gray-700">
                   Año
                 </label>
                 <input
@@ -155,19 +155,19 @@ export default function Edit() {
                 onChange={ (event) => { handleChange(event) } }
                   type="number"
                   name="year"                  
-                  class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"/>
+                  className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"/>
               </div>
 
-              <div class="col-span-6 sm:col-span-3">
+              <div className="col-span-6 sm:col-span-3">
                 <label
-                  for="country"
-                  class="block text-sm font-medium text-gray-700">
+                  htmlFor="country"
+                  className="block text-sm font-medium text-gray-700">
                   Talla
                 </label>
                 <select
                 onChange={ (event) => { handleChange(event) } }                  
                   name="talla"                  
-                  class="mt-1 block w-full bg-white border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+                  className="mt-1 block w-full bg-white border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
                   <option value={''}>---</option>
                   <option value={'Small'}>Small</option>
                   <option value={'Medium'}>Medium</option>
@@ -176,10 +176,10 @@ export default function Edit() {
                 </select>
               </div>
 
-              <div class="col-span-6 sm:col-span-3 lg:col-span-2">
+              <div className="col-span-6 sm:col-span-3 lg:col-span-2">
                 <label
-                  for="postal-code"
-                  class="block text-sm font-medium text-gray-700">
+                  htmlFor="postal-code"
+                  className="block text-sm font-medium text-gray-700">
                   Rodada
                 </label>
                 <input
@@ -187,13 +187,13 @@ export default function Edit() {
                 onChange={ (event) => { handleChange(event) } }
                   type="text"
                   name="rodada"                  
-                  class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"/>
+                  className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"/>
               </div>
 
-              <div class="col-span-6 sm:col-span-6 lg:col-span-2">
+              <div className="col-span-6 sm:col-span-6 lg:col-span-2">
                 <label
-                  for="city"
-                  class="block text-sm font-medium text-gray-700">
+                  htmlFor="city"
+                  className="block text-sm font-medium text-gray-700">
                   Color
                 </label>
                 <input
@@ -201,13 +201,13 @@ export default function Edit() {
                 onChange={ (event) => { handleChange(event) } }
                   type="text"
                   name="color"                  
-                  class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"/>
+                  className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"/>
               </div>
 
-              <div class="col-span-6 sm:col-span-3 lg:col-span-2">
+              <div className="col-span-6 sm:col-span-3 lg:col-span-2">
                 <label
-                  for="region"
-                  class="block text-sm font-medium text-gray-700">
+                  htmlFor="region"
+                  className="block text-sm font-medium text-gray-700">
                   Recorrido Delantero
                 </label>
                 <input
@@ -215,13 +215,13 @@ export default function Edit() {
                 onChange={ (event) => { handleChange(event) } }
                   type="text"
                   name="tipofreno"                  
-                  class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"/>
+                  className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"/>
               </div>
 
-              <div class="col-span-6 sm:col-span-3 lg:col-span-2">
+              <div className="col-span-6 sm:col-span-3 lg:col-span-2">
                 <label
-                  for="postal-code"
-                  class="block text-sm font-medium text-gray-700">
+                  htmlFor="postal-code"
+                  className="block text-sm font-medium text-gray-700">
                   Tipo de Freno
                 </label>
                 <input
@@ -229,35 +229,35 @@ export default function Edit() {
                 onChange={ (event) => { handleChange(event) } }
                   type="text"
                   name="transmision"                  
-                  class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"/>
+                  className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"/>
               </div>
 
-              <div class="col-span-6 sm:col-span-3">
+              <div className="col-span-6 sm:col-span-3">
                 <label
-                  for="country"
-                  class="block text-sm font-medium text-gray-700">
+                  htmlFor="country"
+                  className="block text-sm font-medium text-gray-700">
                   Material
                 </label>
                 <select
                 onChange={ (event) => { handleChange(event) } }                  
                   name="material"                  
-                  class="mt-1 block w-full bg-white border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+                  className="mt-1 block w-full bg-white border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
                   <option value={''}>---</option>
                   <option value={'Aluminio'}>Aluminio</option>
                   <option value={'Carbono'}>Carbono</option>                                   
                 </select>
               </div>
 
-              <div class="col-span-6 sm:col-span-3">
+              <div className="col-span-6 sm:col-span-3">
                 <label
-                  for="country"
-                  class="block text-sm font-medium text-gray-700">
+                  htmlFor="country"
+                  className="block text-sm font-medium text-gray-700">
                   Modalidad
                 </label>
                 <select
                 onChange={ (event) => { handleChange(event) } }                  
                   name="modalidad"                  
-                  class="mt-1 block w-full bg-white border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+                  className="mt-1 block w-full bg-white border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
                   <option value={''}>---</option>
                   <option value={'Desempeno'}>Desempeño</option>
                   <option value={'Gravel'}>Gravel</option>                                   
@@ -266,10 +266,10 @@ export default function Edit() {
                 </select>
               </div>
 
-              <div class="col-span-6">
+              <div className="col-span-6">
                 <label
-                  for="street-address"
-                  class="block text-sm font-medium text-gray-700">
+                  htmlFor="street-address"
+                  className="block text-sm font-medium text-gray-700">
                   Descripcion
                 </label>
                 <input
@@ -277,13 +277,13 @@ export default function Edit() {
                 onChange={ (event) => { handleChange(event) } }
                   type="text"
                   name="descripcion"                  
-                  class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"/>
+                  className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"/>
               </div>
 
-              <div class="col-span-6">
+              <div className="col-span-6">
                 <label
-                  for="street-address"
-                  class="block text-sm font-medium text-gray-700">
+                  htmlFor="street-address"
+                  className="block text-sm font-medium text-gray-700">
                   Imagen
                 </label>
                 <input
@@ -291,13 +291,13 @@ export default function Edit() {
                 onChange={ (event) => { handleChange(event) } }
                   type="text"
                   name="imagen"                  
-                  class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"/>
+                  className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"/>
               </div>
 
-              <div class="col-span-6 sm:col-span-3 lg:col-span-2">
+              <div className="col-span-6 sm:col-span-3 lg:col-span-2">
                 <label
-                  for="postal-code"
-                  class="block text-sm font-medium text-gray-700">
+                  htmlFor="postal-code"
+                  className="block text-sm font-medium text-gray-700">
                   Precio
                 </label>
                 <input
@@ -305,16 +305,16 @@ export default function Edit() {
                 onChange={ (event) => { handleChange(event) } }
                   type="number"
                   name="precio"                  
-                  class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"/>
+                  className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"/>
               </div>
 
             </div>
           </div>
-          <div class="px-4 py-3 bg-gray-50 text-right sm:px-6">
+          <div className="px-4 py-3 bg-gray-50 text-right sm:px-6">
 			  
             <button
               type="submit"
-              class="ml-8 whitespace-nowrap inline-flex items-center justify-center bg-gradient-to-r from-indigo-800 to-lime-500 bg-origin-border px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-black hover:from-lime-700 hover:to-indigo-700"
+              className="ml-8 whitespace-nowrap inline-flex items-center justify-center bg-gradient-to-r from-indigo-800 to-lime-500 bg-origin-border px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-black hover:from-lime-700 hover:to-indigo-700"
             >
               Guardar BikeRuta
             </button>

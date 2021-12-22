@@ -33,11 +33,11 @@ export default function Single() {
 			{
 				authStatus ?
 				<>
-				<div class="mt-4 flex md:mt-0">
+				<div className="mt-4 flex md:mt-0">
 						<Link to={`/bikesmtb/edit/${id}`}>
 							<button 
                             type="button" 
-                            class="ml-8 whitespace-nowrap inline-flex items-center justify-center bg-gradient-to-r from-indigo-800 to-lime-500 bg-origin-border px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-black hover:from-lime-700 hover:to-indigo-700">
+                            className="ml-8 whitespace-nowrap inline-flex items-center justify-center bg-gradient-to-r from-indigo-800 to-lime-500 bg-origin-border px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-black hover:from-lime-700 hover:to-indigo-700">
 								Editar Bikemtb
 							</button>
 						</Link>
@@ -47,7 +47,7 @@ export default function Single() {
 							<button 
 							onClick={() => deleteBikeMtb(id)}
                             type="button" 
-                            class="ml-8 whitespace-nowrap inline-flex items-center justify-center bg-gradient-to-r from-indigo-800 to-lime-500 bg-origin-border px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-black hover:from-lime-700 hover:to-indigo-700">
+                            className="ml-8 whitespace-nowrap inline-flex items-center justify-center bg-gradient-to-r from-indigo-800 to-lime-500 bg-origin-border px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-black hover:from-lime-700 hover:to-indigo-700">
 								Borra Bikemtb
 							</button>
 						</Link>

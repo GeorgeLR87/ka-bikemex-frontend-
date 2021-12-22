@@ -59,7 +59,7 @@ export default function Register() {
           onSubmit={(event) => { handleSubmit(event)}}
           className="space-y-6">
           <div>
-              <label for="password" className="block text-sm font-medium text-gray-700">
+              <label htmlFor="password" className="block text-sm font-medium text-gray-700">
                 Tu nombre completo
               </label>
               <div className="mt-1">
@@ -72,7 +72,7 @@ export default function Register() {
             </div>
 
             <div>
-              <label for="email" className="block text-sm font-medium text-gray-700">
+              <label htmlFor="email" className="block text-sm font-medium text-gray-700">
                 Tu correo electrónico
               </label>
               <div className="mt-1">
@@ -85,7 +85,7 @@ export default function Register() {
             </div>
 
             <div>
-              <label for="password" className="block text-sm font-medium text-gray-700">
+              <label htmlFor="password" className="block text-sm font-medium text-gray-700">
                 Tu contraseña
               </label>
               <div className="mt-1">
@@ -99,7 +99,7 @@ export default function Register() {
             </div>
 
             <div>
-              <label for="password" className="block text-sm font-medium text-gray-700">
+              <label htmlFor="password" className="block text-sm font-medium text-gray-700">
                 Confirma tu contraseña
               </label>
               <div className="mt-1">
