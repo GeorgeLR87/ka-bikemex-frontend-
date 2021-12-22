@@ -1,6 +1,6 @@
 // ./client/src/components/BikesRuta/index.js
 import React, { useEffect, useContext } from 'react'
-import BikeRutaContext from "./../../context/BikeRuta/BikeRutaContext"
+import BikeRutaContext from "./../../context/BikeRuta/BikerutaContext"
 import { Link } from 'react-router-dom'
 
 export default function BikesRuta() {

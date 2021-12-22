@@ -2,7 +2,7 @@
 
 import React, { useState, useContext, useEffect } from 'react'
 import { useParams, useNavigate } from 'react-router-dom'
-import BikeRutaContext from './../../../context/BikeRuta/BikeRutaContext'
+import BikeRutaContext from './../../../context/BikeRuta/BikerutaContext'
 
 
 

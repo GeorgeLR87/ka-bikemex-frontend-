@@ -1,6 +1,6 @@
 // ./client/src/components/BikesMtb/CreateMtb.js
 import React, { useState, useContext } from "react";
-import BikeRutacontext from "./../../context/BikeRuta/BikeRutaContext"
+import BikeRutacontext from "./../../context/BikeRuta/BikerutaContext"
 
 export default function Create() {
   //1. Estado Global

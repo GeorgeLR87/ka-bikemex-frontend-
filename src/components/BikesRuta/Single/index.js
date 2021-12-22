@@ -1,6 +1,6 @@
 // ./client/src/components/BikesRuta/Single/index.js
 import React, { useEffect, useContext } from "react";
-import BikeRutaContext from "./../../../context/BikeRuta/BikeRutaContext";
+import BikeRutaContext from "../../../context/BikeRuta/BikerutaContext";
 import { useParams } from "react-router-dom";
 import { Link } from "react-router-dom";
 import UserContext from "../../../context/User/UserContext";
