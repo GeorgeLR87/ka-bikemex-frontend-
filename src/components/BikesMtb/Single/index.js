@@ -33,6 +33,8 @@ export default function Single() {
 			{
 				authStatus ?
 				<>
+
+				<br></br>
 				<div className="mt-4 flex md:mt-0">
 						<Link to={`/bikesmtb/edit/${id}`}>
 							<button 

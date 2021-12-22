@@ -27,9 +27,7 @@ const UserState = (props) => {
     //3. Funciones
     const registerUser = async (form) => {
 
-        const res = await axiosClient.post('users/create', form)
-
-        console.log(res)
+        const res = await axiosClient.post('users/create', form)        
 
         const token = res.data.data
 
@@ -39,13 +37,9 @@ const UserState = (props) => {
         })
     }
 
-    const loginUser = async (form) => {
+    const loginUser = async (form) => {       
 
-        console.log(form)
-
-        const res = await axiosClient.post('users/login', form)
-
-        console.log(res)
+        const res = await axiosClient.post('users/login', form)        
 
         const token = res.data.data
 

@@ -36,9 +36,7 @@ const BikeRutaState = (props) => {
     // 3. Funciones de cambio en estado Global
     const getBikesRuta = async () => {
 
-        const res = await axiosClient.get('bikesruta/readall')
-
-        console.log('Obteniendo bikesRuta...')
+        const res = await axiosClient.get('bikesruta/readall')        
 
         const list = res.data.data
 
@@ -63,8 +61,7 @@ const BikeRutaState = (props) => {
     const createBikeRuta = async (form) => {
 
         const res = await axiosClient.post('/bikesruta/create', form)
-
-        console.log(res)
+       
     }
 
     const updateBikeRuta  = async (form, idBikeRuta) => {

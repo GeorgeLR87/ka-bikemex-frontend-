@@ -43,8 +43,6 @@ const BikeMtbState = (props) => {
     const getBikesMtb = async () => {
 
         const res = await axiosClient.get('bikesmtb/readall')
-
-        console.log('Obteniendo bikesmtb...')
         
         const list = res.data.data
         
@@ -69,8 +67,7 @@ const BikeMtbState = (props) => {
     const createBikeMtb = async (form) => {
 
         const res = await axiosClient.post('/bikesmtb/create', form)
-
-        console.log(res)
+        
     }
 
     const updateBikeMtb  = async (form, idBikeMtb) => {

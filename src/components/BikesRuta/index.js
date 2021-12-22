@@ -15,7 +15,7 @@ export default function BikesRuta() {
     //Estado Local
     useEffect(() => {
         getBikesRuta()
-    }, [bikesRuta])
+    }, [])
 
 
     return (
