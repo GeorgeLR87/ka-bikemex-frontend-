@@ -1,7 +1,7 @@
 // ./client/src/BikeMtb/bikeMtbState.js
 
 import { useReducer } from "react"
-import BikeRutaContext from "./BikeRutaContext"
+import BikeRutaContext from "./BikerutaContext"
 import BikeRutaReducer from './BikeRutaReducer'
 import axiosClient from './../../config/axios'
 
