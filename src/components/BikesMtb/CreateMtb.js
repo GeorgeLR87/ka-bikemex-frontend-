@@ -1,8 +1,12 @@
 // ./client/src/components/BikesMtb/CreateMtb.js
 import React, { useState, useContext } from "react";
+import { useNavigate } from "react-router-dom";
 import BikeMtbcontext from "./../../context/BikeMtb/BikeMtbContext"
 
 export default function Create() {
+
+  const navigate = useNavigate() 
+
   //1. Estado Global
   const ctx = useContext(BikeMtbcontext)
   const {
@@ -41,6 +45,8 @@ export default function Create() {
     e.preventDefault()
 
     createBikeMtb(newBikeMtb)
+
+    navigate('/bikesmtb')
   }
 
   return (
@@ -247,7 +253,7 @@ export default function Create() {
           <div className="px-4 py-3 bg-gray-50 text-right sm:px-6">
             <button
               type="submit"
-              className="bg-indigo-600 border border-transparent rounded-md shadow-sm py-2 px-4 inline-flex justify-center text-sm font-medium text-white hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+              className="ml-8 whitespace-nowrap inline-flex items-center justify-center bg-gradient-to-r from-indigo-800 to-lime-600 bg-origin-border px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-indigo-50 hover:text-black hover:from-lime-700 hover:to-indigo-700"
             >
               Guardar BikeMtb
             </button>
